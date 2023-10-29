@@ -58,7 +58,7 @@ def get_camera_extrinsic_matrix(sim, camera_name):
 
     # IMPORTANT! This is a correction so that the camera axis is set up along the viewpoint correctly.
     camera_axis_correction = np.array(
-        [[1.0, 0.0, 0.0, 0.0], [0.0, -1.0, 0.0, 0.0], [0.0, 0.0, -1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]
+        [[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, -1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]
     )
     R = R @ camera_axis_correction
     return R
